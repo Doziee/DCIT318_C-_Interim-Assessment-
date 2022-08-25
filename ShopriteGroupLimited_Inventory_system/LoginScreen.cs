@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ShopriteGroupLimited_Inventory_system
 {
-    public partial class Form1 : Form
+    public partial class LoginScreen : Form
     {
-        public Form1()
+        public LoginScreen()
         {
             InitializeComponent();
         }

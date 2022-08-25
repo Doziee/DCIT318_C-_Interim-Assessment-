@@ -25,7 +25,7 @@ namespace ShopriteGroupLimited_Inventory_system
             {
                 SplashProgress.Value = 0;
                 timer1.Stop();
-                Form1 log = new Form1();
+                LoginScreen log = new LoginScreen();
                 this.Hide();
                 log.Show();
             }
