@@ -41,5 +41,10 @@ namespace ShopriteGroupLimited_Inventory_system
         {
             Application.Exit();
         }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

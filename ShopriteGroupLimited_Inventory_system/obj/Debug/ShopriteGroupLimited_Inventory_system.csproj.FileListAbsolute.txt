@@ -11,3 +11,4 @@ C:\DCIT318_CSharp_Interim-Assessment\ShopriteGroupLimited_Inventory_system\obj\D
 C:\DCIT318_CSharp_Interim-Assessment\ShopriteGroupLimited_Inventory_system\obj\Debug\ShopriteGroupLimited_Inventory_system.pdb
 C:\DCIT318_CSharp_Interim-Assessment\ShopriteGroupLimited_Inventory_system\bin\Debug\Guna.UI.dll
 C:\DCIT318_CSharp_Interim-Assessment\ShopriteGroupLimited_Inventory_system\obj\Debug\ShopriteGroupLimited_Inventory_system.csproj.CopyComplete
+C:\DCIT318_CSharp_Interim-Assessment\ShopriteGroupLimited_Inventory_system\obj\Debug\ShopriteGroupLimited_Inventory_system.SplashScreen.resources
