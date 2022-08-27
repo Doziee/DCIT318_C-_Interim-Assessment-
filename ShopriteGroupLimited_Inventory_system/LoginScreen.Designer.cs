@@ -188,7 +188,7 @@
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.IndianRed;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 15;
+            this.gunaButton1.Radius = 10;
             this.gunaButton1.Size = new System.Drawing.Size(88, 42);
             this.gunaButton1.TabIndex = 8;
             this.gunaButton1.Text = "Submit";
@@ -239,7 +239,7 @@
             this.gunaLineTextBox1.Size = new System.Drawing.Size(310, 39);
             this.gunaLineTextBox1.TabIndex = 0;
             // 
-            // Form1
+            // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,7 +249,7 @@
             this.Controls.Add(this.gunaCircleButton2);
             this.Controls.Add(this.gunaCircleButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "LoginScreen";
             this.Text = "Form1";
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
