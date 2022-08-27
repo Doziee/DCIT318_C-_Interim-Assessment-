@@ -16,7 +16,7 @@ namespace ShopriteGroupLimited_Inventory_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductScreen());
+            Application.Run(new CategoryScreen());
         }
     }
 }
