@@ -28,42 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SellDGV1 = new Guna.UI.WinForms.GunaDataGridView();
             this.gunaButton7 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton6 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
-            this.CatDescTb = new Guna.UI.WinForms.GunaLineTextBox();
-            this.CatNameTb = new Guna.UI.WinForms.GunaLineTextBox();
+            this.ProdPrice = new Guna.UI.WinForms.GunaLineTextBox();
+            this.ProdName = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.CatidTb = new Guna.UI.WinForms.GunaLineTextBox();
+            this.Sellid = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.PCatCombo = new System.Windows.Forms.ComboBox();
             this.gunaButton8 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaDataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.ProdQty = new Guna.UI.WinForms.GunaLineTextBox();
+            this.BillDGV = new Guna.UI.WinForms.GunaDataGridView();
+            this.DateLb = new Guna.UI.WinForms.GunaLabel();
             this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
+            this.SellerNameLb = new Guna.UI.WinForms.GunaLabel();
+            this.AddPB = new Guna.UI.WinForms.GunaButton();
+            this.OrderDGV = new Guna.UI.WinForms.GunaDataGridView();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
+            this.AmtLb = new Guna.UI.WinForms.GunaLabel();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SellDGV1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
+            this.panel1.Controls.Add(this.AmtLb);
+            this.panel1.Controls.Add(this.gunaLabel7);
             this.panel1.Controls.Add(this.gunaLabel6);
-            this.panel1.Controls.Add(this.gunaDataGridView1);
-            this.panel1.Controls.Add(this.gunaLineTextBox1);
+            this.panel1.Controls.Add(this.OrderDGV);
+            this.panel1.Controls.Add(this.AddPB);
+            this.panel1.Controls.Add(this.SellerNameLb);
+            this.panel1.Controls.Add(this.DateLb);
+            this.panel1.Controls.Add(this.BillDGV);
+            this.panel1.Controls.Add(this.ProdQty);
             this.panel1.Controls.Add(this.gunaLabel5);
             this.panel1.Controls.Add(this.gunaButton8);
             this.panel1.Controls.Add(this.PCatCombo);
@@ -71,48 +92,48 @@
             this.panel1.Controls.Add(this.gunaButton7);
             this.panel1.Controls.Add(this.gunaButton6);
             this.panel1.Controls.Add(this.gunaButton5);
-            this.panel1.Controls.Add(this.CatDescTb);
-            this.panel1.Controls.Add(this.CatNameTb);
+            this.panel1.Controls.Add(this.ProdPrice);
+            this.panel1.Controls.Add(this.ProdName);
             this.panel1.Controls.Add(this.gunaLabel4);
             this.panel1.Controls.Add(this.gunaLabel3);
-            this.panel1.Controls.Add(this.CatidTb);
+            this.panel1.Controls.Add(this.Sellid);
             this.panel1.Controls.Add(this.gunaLabel2);
             this.panel1.Controls.Add(this.gunaLabel1);
-            this.panel1.Location = new System.Drawing.Point(31, 40);
+            this.panel1.Location = new System.Drawing.Point(31, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(972, 699);
+            this.panel1.Size = new System.Drawing.Size(972, 715);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // SellDGV1
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.SellDGV1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.SellDGV1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.SellDGV1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SellDGV1.BackgroundColor = System.Drawing.Color.White;
             this.SellDGV1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SellDGV1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.SellDGV1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SellDGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SellDGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.SellDGV1.ColumnHeadersHeight = 28;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SellDGV1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SellDGV1.DefaultCellStyle = dataGridViewCellStyle9;
             this.SellDGV1.EnableHeadersVisualStyles = false;
             this.SellDGV1.GridColor = System.Drawing.Color.IndianRed;
-            this.SellDGV1.Location = new System.Drawing.Point(607, 370);
+            this.SellDGV1.Location = new System.Drawing.Point(607, 395);
             this.SellDGV1.Name = "SellDGV1";
             this.SellDGV1.RowHeadersVisible = false;
             this.SellDGV1.RowHeadersWidth = 62;
@@ -142,6 +163,7 @@
             this.SellDGV1.ThemeStyle.RowsStyle.Height = 28;
             this.SellDGV1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.IndianRed;
             this.SellDGV1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SellDGV1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SellDGV1_CellContentClick);
             // 
             // gunaButton7
             // 
@@ -156,7 +178,7 @@
             this.gunaButton7.ForeColor = System.Drawing.Color.White;
             this.gunaButton7.Image = null;
             this.gunaButton7.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton7.Location = new System.Drawing.Point(344, 416);
+            this.gunaButton7.Location = new System.Drawing.Point(372, 635);
             this.gunaButton7.Name = "gunaButton7";
             this.gunaButton7.OnHoverBaseColor = System.Drawing.Color.Tan;
             this.gunaButton7.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -182,7 +204,7 @@
             this.gunaButton6.ForeColor = System.Drawing.Color.White;
             this.gunaButton6.Image = null;
             this.gunaButton6.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton6.Location = new System.Drawing.Point(232, 416);
+            this.gunaButton6.Location = new System.Drawing.Point(260, 635);
             this.gunaButton6.Name = "gunaButton6";
             this.gunaButton6.OnHoverBaseColor = System.Drawing.Color.Tan;
             this.gunaButton6.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -192,7 +214,7 @@
             this.gunaButton6.Radius = 10;
             this.gunaButton6.Size = new System.Drawing.Size(75, 38);
             this.gunaButton6.TabIndex = 25;
-            this.gunaButton6.Text = "EDIT";
+            this.gunaButton6.Text = "PRINT";
             this.gunaButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gunaButton5
@@ -208,7 +230,7 @@
             this.gunaButton5.ForeColor = System.Drawing.Color.White;
             this.gunaButton5.Image = null;
             this.gunaButton5.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton5.Location = new System.Drawing.Point(119, 416);
+            this.gunaButton5.Location = new System.Drawing.Point(147, 635);
             this.gunaButton5.Name = "gunaButton5";
             this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.Tan;
             this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -221,43 +243,45 @@
             this.gunaButton5.Text = "ADD";
             this.gunaButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // CatDescTb
+            // ProdPrice
             // 
-            this.CatDescTb.BackColor = System.Drawing.Color.Tan;
-            this.CatDescTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CatDescTb.FocusedLineColor = System.Drawing.Color.IndianRed;
-            this.CatDescTb.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CatDescTb.ForeColor = System.Drawing.Color.White;
-            this.CatDescTb.LineColor = System.Drawing.Color.White;
-            this.CatDescTb.Location = new System.Drawing.Point(776, 191);
-            this.CatDescTb.Name = "CatDescTb";
-            this.CatDescTb.PasswordChar = '\0';
-            this.CatDescTb.SelectedText = "";
-            this.CatDescTb.Size = new System.Drawing.Size(177, 46);
-            this.CatDescTb.TabIndex = 21;
+            this.ProdPrice.BackColor = System.Drawing.Color.Tan;
+            this.ProdPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ProdPrice.Enabled = false;
+            this.ProdPrice.FocusedLineColor = System.Drawing.Color.IndianRed;
+            this.ProdPrice.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdPrice.ForeColor = System.Drawing.Color.White;
+            this.ProdPrice.LineColor = System.Drawing.Color.White;
+            this.ProdPrice.Location = new System.Drawing.Point(776, 181);
+            this.ProdPrice.Name = "ProdPrice";
+            this.ProdPrice.PasswordChar = '\0';
+            this.ProdPrice.SelectedText = "";
+            this.ProdPrice.Size = new System.Drawing.Size(177, 46);
+            this.ProdPrice.TabIndex = 21;
             // 
-            // CatNameTb
+            // ProdName
             // 
-            this.CatNameTb.BackColor = System.Drawing.Color.Tan;
-            this.CatNameTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CatNameTb.FocusedLineColor = System.Drawing.Color.IndianRed;
-            this.CatNameTb.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CatNameTb.ForeColor = System.Drawing.Color.White;
-            this.CatNameTb.LineColor = System.Drawing.Color.White;
-            this.CatNameTb.Location = new System.Drawing.Point(776, 120);
-            this.CatNameTb.Name = "CatNameTb";
-            this.CatNameTb.PasswordChar = '\0';
-            this.CatNameTb.SelectedText = "";
-            this.CatNameTb.Size = new System.Drawing.Size(177, 46);
-            this.CatNameTb.TabIndex = 20;
-            this.CatNameTb.TextChanged += new System.EventHandler(this.CatNameTb_TextChanged);
+            this.ProdName.BackColor = System.Drawing.Color.Tan;
+            this.ProdName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ProdName.Enabled = false;
+            this.ProdName.FocusedLineColor = System.Drawing.Color.IndianRed;
+            this.ProdName.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdName.ForeColor = System.Drawing.Color.White;
+            this.ProdName.LineColor = System.Drawing.Color.White;
+            this.ProdName.Location = new System.Drawing.Point(776, 110);
+            this.ProdName.Name = "ProdName";
+            this.ProdName.PasswordChar = '\0';
+            this.ProdName.SelectedText = "";
+            this.ProdName.Size = new System.Drawing.Size(177, 46);
+            this.ProdName.TabIndex = 20;
+            this.ProdName.TextChanged += new System.EventHandler(this.CatNameTb_TextChanged);
             // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel4.Location = new System.Drawing.Point(690, 206);
+            this.gunaLabel4.Location = new System.Drawing.Point(690, 196);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(71, 31);
             this.gunaLabel4.TabIndex = 15;
@@ -269,33 +293,33 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel3.Location = new System.Drawing.Point(635, 136);
+            this.gunaLabel3.Location = new System.Drawing.Point(635, 126);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(126, 31);
             this.gunaLabel3.TabIndex = 14;
             this.gunaLabel3.Text = "PRODNAME";
             // 
-            // CatidTb
+            // Sellid
             // 
-            this.CatidTb.BackColor = System.Drawing.Color.Tan;
-            this.CatidTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CatidTb.FocusedLineColor = System.Drawing.Color.IndianRed;
-            this.CatidTb.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CatidTb.ForeColor = System.Drawing.Color.White;
-            this.CatidTb.LineColor = System.Drawing.Color.White;
-            this.CatidTb.Location = new System.Drawing.Point(776, 58);
-            this.CatidTb.Name = "CatidTb";
-            this.CatidTb.PasswordChar = '\0';
-            this.CatidTb.SelectedText = "";
-            this.CatidTb.Size = new System.Drawing.Size(177, 46);
-            this.CatidTb.TabIndex = 13;
+            this.Sellid.BackColor = System.Drawing.Color.Tan;
+            this.Sellid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Sellid.FocusedLineColor = System.Drawing.Color.IndianRed;
+            this.Sellid.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sellid.ForeColor = System.Drawing.Color.White;
+            this.Sellid.LineColor = System.Drawing.Color.White;
+            this.Sellid.Location = new System.Drawing.Point(776, 48);
+            this.Sellid.Name = "Sellid";
+            this.Sellid.PasswordChar = '\0';
+            this.Sellid.SelectedText = "";
+            this.Sellid.Size = new System.Drawing.Size(177, 46);
+            this.Sellid.TabIndex = 13;
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(686, 73);
+            this.gunaLabel2.Location = new System.Drawing.Point(686, 63);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(75, 31);
             this.gunaLabel2.TabIndex = 12;
@@ -306,7 +330,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(429, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(430, 11);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(114, 50);
             this.gunaLabel1.TabIndex = 11;
@@ -322,9 +346,9 @@
             this.PCatCombo.Items.AddRange(new object[] {
             "Admin",
             "Seller"});
-            this.PCatCombo.Location = new System.Drawing.Point(607, 332);
+            this.PCatCombo.Location = new System.Drawing.Point(607, 357);
             this.PCatCombo.Name = "PCatCombo";
-            this.PCatCombo.Size = new System.Drawing.Size(177, 32);
+            this.PCatCombo.Size = new System.Drawing.Size(167, 32);
             this.PCatCombo.TabIndex = 28;
             this.PCatCombo.Text = "   Select Category";
             // 
@@ -341,7 +365,7 @@
             this.gunaButton8.ForeColor = System.Drawing.Color.White;
             this.gunaButton8.Image = null;
             this.gunaButton8.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton8.Location = new System.Drawing.Point(878, 332);
+            this.gunaButton8.Location = new System.Drawing.Point(878, 357);
             this.gunaButton8.Name = "gunaButton8";
             this.gunaButton8.OnHoverBaseColor = System.Drawing.Color.Tan;
             this.gunaButton8.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -359,96 +383,97 @@
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel5.Location = new System.Drawing.Point(647, 267);
+            this.gunaLabel5.Location = new System.Drawing.Point(647, 257);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(114, 31);
             this.gunaLabel5.TabIndex = 31;
             this.gunaLabel5.Text = "QUANTITY";
             // 
-            // gunaLineTextBox1
+            // ProdQty
             // 
-            this.gunaLineTextBox1.BackColor = System.Drawing.Color.Tan;
-            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.IndianRed;
-            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLineTextBox1.ForeColor = System.Drawing.Color.White;
-            this.gunaLineTextBox1.LineColor = System.Drawing.Color.White;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(776, 252);
-            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
-            this.gunaLineTextBox1.PasswordChar = '\0';
-            this.gunaLineTextBox1.SelectedText = "";
-            this.gunaLineTextBox1.Size = new System.Drawing.Size(177, 46);
-            this.gunaLineTextBox1.TabIndex = 32;
+            this.ProdQty.BackColor = System.Drawing.Color.Tan;
+            this.ProdQty.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ProdQty.FocusedLineColor = System.Drawing.Color.IndianRed;
+            this.ProdQty.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdQty.ForeColor = System.Drawing.Color.White;
+            this.ProdQty.LineColor = System.Drawing.Color.White;
+            this.ProdQty.Location = new System.Drawing.Point(776, 242);
+            this.ProdQty.Name = "ProdQty";
+            this.ProdQty.PasswordChar = '\0';
+            this.ProdQty.SelectedText = "";
+            this.ProdQty.Size = new System.Drawing.Size(177, 46);
+            this.ProdQty.TabIndex = 32;
             // 
-            // gunaDataGridView1
+            // BillDGV
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.gunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.gunaDataGridView1.ColumnHeadersHeight = 28;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.gunaDataGridView1.EnableHeadersVisualStyles = false;
-            this.gunaDataGridView1.GridColor = System.Drawing.Color.IndianRed;
-            this.gunaDataGridView1.Location = new System.Drawing.Point(27, 479);
-            this.gunaDataGridView1.Name = "gunaDataGridView1";
-            this.gunaDataGridView1.RowHeadersVisible = false;
-            this.gunaDataGridView1.RowHeadersWidth = 62;
-            this.gunaDataGridView1.RowTemplate.Height = 28;
-            this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView1.Size = new System.Drawing.Size(484, 195);
-            this.gunaDataGridView1.TabIndex = 33;
-            this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.IndianRed;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.IndianRed;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Height = 28;
-            this.gunaDataGridView1.ThemeStyle.ReadOnly = false;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Height = 28;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.IndianRed;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.BillDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.BillDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BillDGV.BackgroundColor = System.Drawing.Color.White;
+            this.BillDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BillDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.BillDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BillDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.BillDGV.ColumnHeadersHeight = 28;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BillDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            this.BillDGV.EnableHeadersVisualStyles = false;
+            this.BillDGV.GridColor = System.Drawing.Color.IndianRed;
+            this.BillDGV.Location = new System.Drawing.Point(20, 417);
+            this.BillDGV.Name = "BillDGV";
+            this.BillDGV.RowHeadersVisible = false;
+            this.BillDGV.RowHeadersWidth = 62;
+            this.BillDGV.RowTemplate.Height = 28;
+            this.BillDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.BillDGV.Size = new System.Drawing.Size(539, 195);
+            this.BillDGV.TabIndex = 33;
+            this.BillDGV.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.BillDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.BillDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.BillDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.BillDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.BillDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.BillDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.BillDGV.ThemeStyle.GridColor = System.Drawing.Color.IndianRed;
+            this.BillDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.IndianRed;
+            this.BillDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.BillDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BillDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.BillDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.BillDGV.ThemeStyle.HeaderStyle.Height = 28;
+            this.BillDGV.ThemeStyle.ReadOnly = false;
+            this.BillDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.BillDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.BillDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.BillDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.BillDGV.ThemeStyle.RowsStyle.Height = 28;
+            this.BillDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.IndianRed;
+            this.BillDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // gunaLabel6
+            // DateLb
             // 
-            this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel6.Location = new System.Drawing.Point(766, 11);
-            this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(68, 35);
-            this.gunaLabel6.TabIndex = 34;
-            this.gunaLabel6.Text = "Date:";
+            this.DateLb.AutoSize = true;
+            this.DateLb.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLb.ForeColor = System.Drawing.Color.White;
+            this.DateLb.Location = new System.Drawing.Point(85, 11);
+            this.DateLb.Name = "DateLb";
+            this.DateLb.Size = new System.Drawing.Size(68, 35);
+            this.DateLb.TabIndex = 34;
+            this.DateLb.Text = "Date:";
+            this.DateLb.Click += new System.EventHandler(this.DateLb_Click);
             // 
             // gunaButton4
             // 
@@ -477,6 +502,172 @@
             this.gunaButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton4.Click += new System.EventHandler(this.gunaButton4_Click);
             // 
+            // SellerNameLb
+            // 
+            this.SellerNameLb.AutoSize = true;
+            this.SellerNameLb.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SellerNameLb.ForeColor = System.Drawing.Color.White;
+            this.SellerNameLb.Location = new System.Drawing.Point(788, 11);
+            this.SellerNameLb.Name = "SellerNameLb";
+            this.SellerNameLb.Size = new System.Drawing.Size(70, 35);
+            this.SellerNameLb.TabIndex = 35;
+            this.SellerNameLb.Text = "Seller";
+            // 
+            // AddPB
+            // 
+            this.AddPB.AnimationHoverSpeed = 0.07F;
+            this.AddPB.AnimationSpeed = 0.03F;
+            this.AddPB.BackColor = System.Drawing.Color.Transparent;
+            this.AddPB.BaseColor = System.Drawing.Color.IndianRed;
+            this.AddPB.BorderColor = System.Drawing.Color.Black;
+            this.AddPB.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.AddPB.FocusedColor = System.Drawing.Color.Empty;
+            this.AddPB.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddPB.ForeColor = System.Drawing.Color.White;
+            this.AddPB.Image = null;
+            this.AddPB.ImageSize = new System.Drawing.Size(20, 20);
+            this.AddPB.Location = new System.Drawing.Point(741, 306);
+            this.AddPB.Name = "AddPB";
+            this.AddPB.OnHoverBaseColor = System.Drawing.Color.Tan;
+            this.AddPB.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.AddPB.OnHoverForeColor = System.Drawing.Color.IndianRed;
+            this.AddPB.OnHoverImage = null;
+            this.AddPB.OnPressedColor = System.Drawing.Color.Black;
+            this.AddPB.Radius = 10;
+            this.AddPB.Size = new System.Drawing.Size(169, 32);
+            this.AddPB.TabIndex = 36;
+            this.AddPB.Text = "Add Product";
+            this.AddPB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AddPB.Click += new System.EventHandler(this.AddPB_Click);
+            // 
+            // OrderDGV
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.OrderDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.OrderDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.OrderDGV.BackgroundColor = System.Drawing.Color.White;
+            this.OrderDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OrderDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.OrderDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.OrderDGV.ColumnHeadersHeight = 35;
+            this.OrderDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.PName,
+            this.Price,
+            this.Quantity,
+            this.Total});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.OrderDGV.EnableHeadersVisualStyles = false;
+            this.OrderDGV.GridColor = System.Drawing.Color.IndianRed;
+            this.OrderDGV.Location = new System.Drawing.Point(20, 93);
+            this.OrderDGV.Name = "OrderDGV";
+            this.OrderDGV.RowHeadersVisible = false;
+            this.OrderDGV.RowHeadersWidth = 62;
+            this.OrderDGV.RowTemplate.Height = 28;
+            this.OrderDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.OrderDGV.Size = new System.Drawing.Size(539, 195);
+            this.OrderDGV.TabIndex = 37;
+            this.OrderDGV.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.OrderDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.OrderDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.OrderDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.OrderDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.OrderDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.OrderDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.OrderDGV.ThemeStyle.GridColor = System.Drawing.Color.IndianRed;
+            this.OrderDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.IndianRed;
+            this.OrderDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.OrderDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.OrderDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.OrderDGV.ThemeStyle.HeaderStyle.Height = 35;
+            this.OrderDGV.ThemeStyle.ReadOnly = false;
+            this.OrderDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.OrderDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.OrderDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.OrderDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.OrderDGV.ThemeStyle.RowsStyle.Height = 28;
+            this.OrderDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.IndianRed;
+            this.OrderDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel6.Location = new System.Drawing.Point(215, 357);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(145, 50);
+            this.gunaLabel6.TabIndex = 38;
+            this.gunaLabel6.Text = "Sells List";
+            // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel7.Location = new System.Drawing.Point(175, 291);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(106, 38);
+            this.gunaLabel7.TabIndex = 39;
+            this.gunaLabel7.Text = "Amount";
+            // 
+            // AmtLb
+            // 
+            this.AmtLb.AutoSize = true;
+            this.AmtLb.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AmtLb.ForeColor = System.Drawing.Color.White;
+            this.AmtLb.Location = new System.Drawing.Point(277, 291);
+            this.AmtLb.Name = "AmtLb";
+            this.AmtLb.Size = new System.Drawing.Size(89, 38);
+            this.AmtLb.TabIndex = 40;
+            this.AmtLb.Text = "Cedis: ";
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Prodid";
+            this.id.MinimumWidth = 8;
+            this.id.Name = "id";
+            // 
+            // PName
+            // 
+            this.PName.HeaderText = "Name";
+            this.PName.MinimumWidth = 8;
+            this.PName.Name = "PName";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 8;
+            this.Price.Name = "Price";
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Qty";
+            this.Quantity.MinimumWidth = 8;
+            this.Quantity.Name = "Quantity";
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 8;
+            this.Total.Name = "Total";
+            // 
             // SellingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -489,10 +680,12 @@
             this.Name = "SellingScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SellingScreen";
+            this.Load += new System.EventHandler(this.SellingScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SellDGV1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -504,19 +697,30 @@
         private Guna.UI.WinForms.GunaButton gunaButton7;
         private Guna.UI.WinForms.GunaButton gunaButton6;
         private Guna.UI.WinForms.GunaButton gunaButton5;
-        private Guna.UI.WinForms.GunaLineTextBox CatDescTb;
-        private Guna.UI.WinForms.GunaLineTextBox CatNameTb;
+        private Guna.UI.WinForms.GunaLineTextBox ProdPrice;
+        private Guna.UI.WinForms.GunaLineTextBox ProdName;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaLineTextBox CatidTb;
+        private Guna.UI.WinForms.GunaLineTextBox Sellid;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.ComboBox PCatCombo;
         private Guna.UI.WinForms.GunaButton gunaButton8;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
+        private Guna.UI.WinForms.GunaLineTextBox ProdQty;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaLabel gunaLabel6;
-        private Guna.UI.WinForms.GunaDataGridView gunaDataGridView1;
+        private Guna.UI.WinForms.GunaLabel DateLb;
+        private Guna.UI.WinForms.GunaDataGridView BillDGV;
         private Guna.UI.WinForms.GunaButton gunaButton4;
+        private Guna.UI.WinForms.GunaLabel SellerNameLb;
+        private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private Guna.UI.WinForms.GunaDataGridView OrderDGV;
+        private Guna.UI.WinForms.GunaButton AddPB;
+        private Guna.UI.WinForms.GunaLabel AmtLb;
+        private Guna.UI.WinForms.GunaLabel gunaLabel7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }
