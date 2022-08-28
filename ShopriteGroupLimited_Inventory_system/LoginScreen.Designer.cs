@@ -37,9 +37,9 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.gunaLineTextBox2 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.RoleCombo = new System.Windows.Forms.ComboBox();
+            this.PSword = new Guna.UI.WinForms.GunaLineTextBox();
+            this.UName = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,9 +101,9 @@
             this.gunaGroupBox1.Controls.Add(this.gunaLabel2);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel1);
             this.gunaGroupBox1.Controls.Add(this.gunaButton1);
-            this.gunaGroupBox1.Controls.Add(this.comboBox1);
-            this.gunaGroupBox1.Controls.Add(this.gunaLineTextBox2);
-            this.gunaGroupBox1.Controls.Add(this.gunaLineTextBox1);
+            this.gunaGroupBox1.Controls.Add(this.RoleCombo);
+            this.gunaGroupBox1.Controls.Add(this.PSword);
+            this.gunaGroupBox1.Controls.Add(this.UName);
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Tan;
             this.gunaGroupBox1.Location = new System.Drawing.Point(188, 32);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
@@ -121,6 +121,7 @@
             this.gunaLabel5.Size = new System.Drawing.Size(67, 35);
             this.gunaLabel5.TabIndex = 14;
             this.gunaLabel5.Text = "Clear";
+            this.gunaLabel5.Click += new System.EventHandler(this.gunaLabel5_Click_1);
             // 
             // gunaLabel4
             // 
@@ -194,50 +195,50 @@
             this.gunaButton1.Text = "Submit";
             this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
-            // comboBox1
+            // RoleCombo
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Tan;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe Print", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.RoleCombo.BackColor = System.Drawing.Color.Tan;
+            this.RoleCombo.Font = new System.Drawing.Font("Segoe Print", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleCombo.ForeColor = System.Drawing.Color.White;
+            this.RoleCombo.FormattingEnabled = true;
+            this.RoleCombo.Items.AddRange(new object[] {
             "Admin",
             "Seller"});
-            this.comboBox1.Location = new System.Drawing.Point(322, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(49, 32);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.Text = "as";
+            this.RoleCombo.Location = new System.Drawing.Point(322, 24);
+            this.RoleCombo.Name = "RoleCombo";
+            this.RoleCombo.Size = new System.Drawing.Size(114, 32);
+            this.RoleCombo.TabIndex = 7;
+            this.RoleCombo.Text = "Select Role";
             // 
-            // gunaLineTextBox2
+            // PSword
             // 
-            this.gunaLineTextBox2.BackColor = System.Drawing.Color.Tan;
-            this.gunaLineTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox2.FocusedLineColor = System.Drawing.Color.IndianRed;
-            this.gunaLineTextBox2.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLineTextBox2.ForeColor = System.Drawing.Color.White;
-            this.gunaLineTextBox2.LineColor = System.Drawing.Color.White;
-            this.gunaLineTextBox2.Location = new System.Drawing.Point(178, 218);
-            this.gunaLineTextBox2.Name = "gunaLineTextBox2";
-            this.gunaLineTextBox2.PasswordChar = '\0';
-            this.gunaLineTextBox2.SelectedText = "";
-            this.gunaLineTextBox2.Size = new System.Drawing.Size(310, 43);
-            this.gunaLineTextBox2.TabIndex = 2;
+            this.PSword.BackColor = System.Drawing.Color.Tan;
+            this.PSword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PSword.FocusedLineColor = System.Drawing.Color.IndianRed;
+            this.PSword.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PSword.ForeColor = System.Drawing.Color.White;
+            this.PSword.LineColor = System.Drawing.Color.White;
+            this.PSword.Location = new System.Drawing.Point(178, 218);
+            this.PSword.Name = "PSword";
+            this.PSword.PasswordChar = '\0';
+            this.PSword.SelectedText = "";
+            this.PSword.Size = new System.Drawing.Size(310, 43);
+            this.PSword.TabIndex = 2;
             // 
-            // gunaLineTextBox1
+            // UName
             // 
-            this.gunaLineTextBox1.BackColor = System.Drawing.Color.Tan;
-            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.IndianRed;
-            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLineTextBox1.ForeColor = System.Drawing.Color.White;
-            this.gunaLineTextBox1.LineColor = System.Drawing.Color.White;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(178, 138);
-            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
-            this.gunaLineTextBox1.PasswordChar = '\0';
-            this.gunaLineTextBox1.SelectedText = "";
-            this.gunaLineTextBox1.Size = new System.Drawing.Size(310, 39);
-            this.gunaLineTextBox1.TabIndex = 0;
+            this.UName.BackColor = System.Drawing.Color.Tan;
+            this.UName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.UName.FocusedLineColor = System.Drawing.Color.IndianRed;
+            this.UName.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UName.ForeColor = System.Drawing.Color.White;
+            this.UName.LineColor = System.Drawing.Color.White;
+            this.UName.Location = new System.Drawing.Point(178, 138);
+            this.UName.Name = "UName";
+            this.UName.PasswordChar = '\0';
+            this.UName.SelectedText = "";
+            this.UName.Size = new System.Drawing.Size(310, 39);
+            this.UName.TabIndex = 0;
             // 
             // LoginScreen
             // 
@@ -262,11 +263,11 @@
         private Guna.UI.WinForms.GunaCircleButton gunaCircleButton1;
         private Guna.UI.WinForms.GunaCircleButton gunaCircleButton2;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
+        private Guna.UI.WinForms.GunaLineTextBox UName;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaButton gunaButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox2;
+        private System.Windows.Forms.ComboBox RoleCombo;
+        private Guna.UI.WinForms.GunaLineTextBox PSword;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;

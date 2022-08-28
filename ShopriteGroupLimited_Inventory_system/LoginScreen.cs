@@ -44,6 +44,47 @@ namespace ShopriteGroupLimited_Inventory_system
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
+            if (UName.Text == "" || PSword.Text == "")
+            {
+                MessageBox.Show("Enter username and password");
+            }
+            else
+            {
+                if(RoleCombo.SelectedIndex>-1)
+                {
+                    if (RoleCombo.SelectedItem.ToString() == "Admin")
+                    {
+                          if (UName.Text == "Admin" && PSword.Text == "12345")
+                          {
+                                    ProductScreen productScreen = new ProductScreen();
+                                    productScreen.Show();
+                                    this.Hide();
+                          }
+                          else
+                          {
+                                    MessageBox.Show("Enter correct username and password, if you are the admin");
+                          }
+                    }
+                    else
+                    {
+                        MessageBox.Show("You are registered as a seller");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Select Role");
+                }
+            }
+        }
+
+        private void gunaLabel5_Click(object sender, EventArgs e)
+        {
+            UName.Text = "";
+            PSword.Text = "";
+        }
+
+        private void gunaLabel5_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
