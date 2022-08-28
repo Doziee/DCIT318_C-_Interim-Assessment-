@@ -23,7 +23,19 @@ namespace ShopriteGroupLimited_Inventory_system
         {
 
         }
-        
+
+        private void populateIntoProdViewGrid()
+        {
+            Con.Open();
+            string query = "select * from ProductTbl";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            var ds = new DataSet();
+            adapter.Fill(ds);
+            ProdDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+
         private void gunaButton4_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -49,6 +61,7 @@ namespace ShopriteGroupLimited_Inventory_system
         private void ProductScreen_Load(object sender, EventArgs e)
         {
             forPCatCombo();
+            populateIntoProdViewGrid();
         }
 
         private void gunaButton2_Click(object sender, EventArgs e)
@@ -68,6 +81,7 @@ namespace ShopriteGroupLimited_Inventory_system
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product added successfully");
                 Con.Close();
+                populateIntoProdViewGrid();
             }
             catch (Exception ex)
             {
@@ -101,6 +115,7 @@ namespace ShopriteGroupLimited_Inventory_system
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Product deleted successfully");
                     Con.Close();
+                    populateIntoProdViewGrid();
                 }
 
             }
@@ -110,5 +125,29 @@ namespace ShopriteGroupLimited_Inventory_system
             }
         }
 
+        private void gunaButton6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ProdId.Text == "" || ProdName.Text == "" || ProdQty.Text == "" || ProdPrice.Text == "")
+                {
+                    MessageBox.Show("Information Missing");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "update ProductTbl set ProdName = '" + ProdName.Text + "', ProdPrice = '" + ProdPrice.Text + "', ProdQty = '" + ProdQty.Text + "' where ProdId = " + ProdId.Text + "; ";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product updated successfully");
+                    Con.Close();
+                    populateIntoProdViewGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
