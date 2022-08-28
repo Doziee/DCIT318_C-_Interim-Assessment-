@@ -149,5 +149,14 @@ namespace ShopriteGroupLimited_Inventory_system
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void gunaButton8_Click(object sender, EventArgs e)
+        {
+            populateIntoProdViewGrid();
+        }
+        private void PCatCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

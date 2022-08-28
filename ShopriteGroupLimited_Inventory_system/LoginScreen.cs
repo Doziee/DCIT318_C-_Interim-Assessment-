@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace ShopriteGroupLimited_Inventory_system
         {
             InitializeComponent();
         }
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Documents\shopritedb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void gunaCircleButton2_Click(object sender, EventArgs e)
         {
@@ -67,7 +69,23 @@ namespace ShopriteGroupLimited_Inventory_system
                     }
                     else
                     {
-                        MessageBox.Show("You are registered as a seller");
+                        //MessageBox.Show("You are registered as a seller");
+                        Con.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter("Select Count(8) from SellerTbl where SellerName = '"+ UName.Text +"' and SellerPass = '"+PSword.Text+"'", Con);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        if (dt.Rows[0][0].ToString() == "1")
+                        {
+                            SellingScreen sell = new SellingScreen();
+                            sell.Show();
+                            this.Hide();
+                            Con.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong username or password");
+                        }
+                        Con.Close();
                     }
                 }
                 else
@@ -84,6 +102,16 @@ namespace ShopriteGroupLimited_Inventory_system
         }
 
         private void gunaLabel5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PSword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginScreen_Load(object sender, EventArgs e)
         {
 
         }

@@ -224,6 +224,7 @@
             this.PSword.SelectedText = "";
             this.PSword.Size = new System.Drawing.Size(310, 43);
             this.PSword.TabIndex = 2;
+            this.PSword.TextChanged += new System.EventHandler(this.PSword_TextChanged);
             // 
             // UName
             // 
@@ -251,7 +252,9 @@
             this.Controls.Add(this.gunaCircleButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
             this.ResumeLayout(false);

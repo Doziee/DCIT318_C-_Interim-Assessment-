@@ -130,18 +130,44 @@ namespace ShopriteGroupLimited_Inventory_system
 
         private void BillDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            flag = 1;
+            
         }
 
         private void PrintScreen_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawString("SHOPRITE", new Font("Times New Roman", 40, FontStyle.Bold), Brushes.IndianRed, new Point(260));
             e.Graphics.DrawString("Bill ID: " + BillDGV.SelectedRows[0].Cells[0].Value.ToString(), new Font("Times New Roman", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 70));
+            e.Graphics.DrawString("Seller Name: " + BillDGV.SelectedRows[0].Cells[1].Value.ToString(), new Font("Times New Roman", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 100));
+            e.Graphics.DrawString("Date: " + BillDGV.SelectedRows[0].Cells[2].Value.ToString(), new Font("Times New Roman", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 130));
+            e.Graphics.DrawString("Total Amount: " + BillDGV.SelectedRows[0].Cells[3].Value.ToString(), new Font("Times New Roman", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 160));
+            e.Graphics.DrawString("CodeSpace", new Font("Times New Roman", 35, FontStyle.Italic), Brushes.IndianRed, new Point(260, 360));
         }
 
         private void PrintPreview_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void PCatCombo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void gunaButton8_Click(object sender, EventArgs e)
+        {
+            populateIntoSellViewGrid();
+        }
+
+        private void gunaButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaLabel7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginScreen login = new LoginScreen();
+            login.Show();
         }
 
         private void AddPB_Click(object sender, EventArgs e)
