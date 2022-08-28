@@ -72,8 +72,6 @@ namespace ShopriteGroupLimited_Inventory_system
             populateIntoSellViewGrid();
             populateIntoBillViewGrid();
         }
-
-        int flag = 0;
         private void SellDGV1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             ProdName.Text = SellDGV1.SelectedRows[0].Cells[0].Value.ToString();
