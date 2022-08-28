@@ -16,5 +16,10 @@ namespace ShopriteGroupLimited_Inventory_system
         {
             InitializeComponent();
         }
+
+        private void SellerScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

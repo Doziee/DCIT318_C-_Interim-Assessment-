@@ -28,7 +28,8 @@ namespace ShopriteGroupLimited_Inventory_system
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Category added successfully");
                 Con.Close();
-            }catch(Exception ex)
+                populateIntoCatViewGrid();
+                }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -108,6 +109,13 @@ namespace ShopriteGroupLimited_Inventory_system
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            ProductScreen productScreen = new ProductScreen();
+            productScreen.Show();
+            this.Hide();
         }
     }
 }
