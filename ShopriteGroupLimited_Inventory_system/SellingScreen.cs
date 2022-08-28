@@ -122,6 +122,30 @@ namespace ShopriteGroupLimited_Inventory_system
 
         }
 
+        private void gunaButton6_Click(object sender, EventArgs e)
+        {
+            if (PrintPreview.ShowDialog() == DialogResult.OK)
+            {
+                PrintScreen.Print();
+            }
+        }
+
+        private void BillDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            flag = 1;
+        }
+
+        private void PrintScreen_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("SHOPRITE", new Font("Times New Roman", 40, FontStyle.Bold), Brushes.IndianRed, new Point(260));
+            e.Graphics.DrawString("Bill ID: " + BillDGV.SelectedRows[0].Cells[0].Value.ToString(), new Font("Times New Roman", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 70));
+        }
+
+        private void PrintPreview_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void AddPB_Click(object sender, EventArgs e)
         {
             if (ProdName.Text == "" || ProdQty.Text == "")

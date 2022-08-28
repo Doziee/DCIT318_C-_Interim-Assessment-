@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellingScreen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.SellDGV1 = new Guna.UI.WinForms.GunaDataGridView();
             this.gunaButton7 = new Guna.UI.WinForms.GunaButton();
@@ -67,6 +68,8 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AmtLb = new Guna.UI.WinForms.GunaLabel();
+            this.PrintPreview = new System.Windows.Forms.PrintPreviewDialog();
+            this.PrintScreen = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SellDGV1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).BeginInit();
@@ -216,6 +219,7 @@
             this.gunaButton6.TabIndex = 25;
             this.gunaButton6.Text = "PRINT";
             this.gunaButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton6.Click += new System.EventHandler(this.gunaButton6_Click);
             // 
             // gunaButton5
             // 
@@ -463,6 +467,7 @@
             this.BillDGV.ThemeStyle.RowsStyle.Height = 28;
             this.BillDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.IndianRed;
             this.BillDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.BillDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BillDGV_CellContentClick);
             // 
             // DateLb
             // 
@@ -671,6 +676,22 @@
             this.AmtLb.Text = "0";
             this.AmtLb.Click += new System.EventHandler(this.AmtLb_Click);
             // 
+            // PrintPreview
+            // 
+            this.PrintPreview.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.PrintPreview.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.PrintPreview.ClientSize = new System.Drawing.Size(400, 300);
+            this.PrintPreview.Document = this.PrintScreen;
+            this.PrintPreview.Enabled = true;
+            this.PrintPreview.Icon = ((System.Drawing.Icon)(resources.GetObject("PrintPreview.Icon")));
+            this.PrintPreview.Name = "PrintPreview";
+            this.PrintPreview.Visible = false;
+            this.PrintPreview.Load += new System.EventHandler(this.PrintPreview_Load);
+            // 
+            // PrintScreen
+            // 
+            this.PrintScreen.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintScreen_PrintPage);
+            // 
             // SellingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -725,5 +746,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private Guna.UI.WinForms.GunaLabel AmtLb;
+        private System.Windows.Forms.PrintPreviewDialog PrintPreview;
+        private System.Drawing.Printing.PrintDocument PrintScreen;
     }
 }
