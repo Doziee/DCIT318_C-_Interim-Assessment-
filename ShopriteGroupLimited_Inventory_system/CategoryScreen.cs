@@ -33,10 +33,81 @@ namespace ShopriteGroupLimited_Inventory_system
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private void populateIntoCatViewGrid()
+        {
+            Con.Open();
+            string query = "select * from CategoryTbl";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            var ds = new DataSet();
+            adapter.Fill(ds);
+            CatDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void gunaButton4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void CategoryScreen_Load(object sender, EventArgs e)
+        {
+            populateIntoCatViewGrid();
+        }
+
+        private void CatDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CatidTb.Text = CatDGV.SelectedRows[0].Cells[0].Value.ToString();
+            CatNameTb.Text = CatDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CatDescTb.Text = CatDGV.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void gunaButton7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CatidTb.Text == "")
+                {
+                    MessageBox.Show("Select Category to Delete");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "delete from CategoryTbl where Catid =" + CatidTb.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Category deleted successfully");
+                    populateIntoCatViewGrid();
+                    Con.Close();
+                }
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void gunaButton6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CatidTb.Text == "" || CatNameTb.Text == "" || CatDescTb.Text == "")
+                {
+                    MessageBox.Show("Information Missing");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "update CategoryTbl set CatName = '" + CatNameTb.Text + "', CatDesc = '" + CatDescTb.Text + "' where Catid = " + CatidTb.Text + "; ";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Catergory updated successfully");
+                    Con.Close();
+                    populateIntoCatViewGrid();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
