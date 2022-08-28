@@ -23,7 +23,7 @@ namespace ShopriteGroupLimited_Inventory_system
         {
 
         }
-
+        
         private void gunaButton4_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -57,5 +57,58 @@ namespace ShopriteGroupLimited_Inventory_system
             categoryScreen.Show();
             this.Hide();
         }
+
+        private void gunaButton5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Con.Open();
+                string query = "Insert into ProductTbl values(" + ProdId.Text + ", '" + ProdName.Text + "', " + ProdQty.Text + ", " + ProdPrice.Text + ", '" + PCatCombo.SelectedValue.ToString() + "') ";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Product added successfully");
+                Con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void gunaDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ProdId.Text = ProdDGV.SelectedRows[0].Cells[0].Value.ToString();
+            ProdName.Text = ProdDGV.SelectedRows[0].Cells[1].Value.ToString();
+            ProdQty.Text = ProdDGV.SelectedRows[0].Cells[2].Value.ToString();
+            ProdPrice.Text = ProdDGV.SelectedRows[0].Cells[3].Value.ToString();
+            PCatCombo.SelectedValue = ProdDGV.SelectedRows[0].Cells[4].Value.ToString();
+        }
+
+        private void gunaButton7_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (ProdId.Text == "")
+                {
+                    MessageBox.Show("Select Product to Delete");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "delete from ProductTbl where ProdId =" + ProdId.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product deleted successfully");
+                    Con.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

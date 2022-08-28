@@ -117,5 +117,15 @@ namespace ShopriteGroupLimited_Inventory_system
             productScreen.Show();
             this.Hide();
         }
+
+        private void CatidTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CatNameTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
