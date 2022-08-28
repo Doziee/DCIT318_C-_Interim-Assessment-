@@ -46,7 +46,7 @@
             this.ProdName = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.Sellid = new Guna.UI.WinForms.GunaLineTextBox();
+            this.Billid = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.PCatCombo = new System.Windows.Forms.ComboBox();
@@ -60,13 +60,13 @@
             this.AddPB = new Guna.UI.WinForms.GunaButton();
             this.OrderDGV = new Guna.UI.WinForms.GunaDataGridView();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
-            this.AmtLb = new Guna.UI.WinForms.GunaLabel();
+            this.Amount = new Guna.UI.WinForms.GunaLabel();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmtLb = new Guna.UI.WinForms.GunaLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SellDGV1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).BeginInit();
@@ -77,7 +77,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
             this.panel1.Controls.Add(this.AmtLb);
-            this.panel1.Controls.Add(this.gunaLabel7);
+            this.panel1.Controls.Add(this.Amount);
             this.panel1.Controls.Add(this.gunaLabel6);
             this.panel1.Controls.Add(this.OrderDGV);
             this.panel1.Controls.Add(this.AddPB);
@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.ProdName);
             this.panel1.Controls.Add(this.gunaLabel4);
             this.panel1.Controls.Add(this.gunaLabel3);
-            this.panel1.Controls.Add(this.Sellid);
+            this.panel1.Controls.Add(this.Billid);
             this.panel1.Controls.Add(this.gunaLabel2);
             this.panel1.Controls.Add(this.gunaLabel1);
             this.panel1.Location = new System.Drawing.Point(31, 24);
@@ -242,6 +242,7 @@
             this.gunaButton5.TabIndex = 24;
             this.gunaButton5.Text = "ADD";
             this.gunaButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton5.Click += new System.EventHandler(this.gunaButton5_Click);
             // 
             // ProdPrice
             // 
@@ -299,20 +300,20 @@
             this.gunaLabel3.TabIndex = 14;
             this.gunaLabel3.Text = "PRODNAME";
             // 
-            // Sellid
+            // Billid
             // 
-            this.Sellid.BackColor = System.Drawing.Color.Tan;
-            this.Sellid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Sellid.FocusedLineColor = System.Drawing.Color.IndianRed;
-            this.Sellid.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sellid.ForeColor = System.Drawing.Color.White;
-            this.Sellid.LineColor = System.Drawing.Color.White;
-            this.Sellid.Location = new System.Drawing.Point(776, 48);
-            this.Sellid.Name = "Sellid";
-            this.Sellid.PasswordChar = '\0';
-            this.Sellid.SelectedText = "";
-            this.Sellid.Size = new System.Drawing.Size(177, 46);
-            this.Sellid.TabIndex = 13;
+            this.Billid.BackColor = System.Drawing.Color.Tan;
+            this.Billid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Billid.FocusedLineColor = System.Drawing.Color.IndianRed;
+            this.Billid.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Billid.ForeColor = System.Drawing.Color.White;
+            this.Billid.LineColor = System.Drawing.Color.White;
+            this.Billid.Location = new System.Drawing.Point(776, 48);
+            this.Billid.Name = "Billid";
+            this.Billid.PasswordChar = '\0';
+            this.Billid.SelectedText = "";
+            this.Billid.Size = new System.Drawing.Size(177, 46);
+            this.Billid.TabIndex = 13;
             // 
             // gunaLabel2
             // 
@@ -616,27 +617,17 @@
             this.gunaLabel6.TabIndex = 38;
             this.gunaLabel6.Text = "Sells List";
             // 
-            // gunaLabel7
+            // Amount
             // 
-            this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel7.Location = new System.Drawing.Point(175, 291);
-            this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(106, 38);
-            this.gunaLabel7.TabIndex = 39;
-            this.gunaLabel7.Text = "Amount";
-            // 
-            // AmtLb
-            // 
-            this.AmtLb.AutoSize = true;
-            this.AmtLb.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmtLb.ForeColor = System.Drawing.Color.White;
-            this.AmtLb.Location = new System.Drawing.Point(277, 291);
-            this.AmtLb.Name = "AmtLb";
-            this.AmtLb.Size = new System.Drawing.Size(89, 38);
-            this.AmtLb.TabIndex = 40;
-            this.AmtLb.Text = "Cedis: ";
+            this.Amount.AutoSize = true;
+            this.Amount.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Amount.ForeColor = System.Drawing.Color.White;
+            this.Amount.Location = new System.Drawing.Point(182, 291);
+            this.Amount.Name = "Amount";
+            this.Amount.Size = new System.Drawing.Size(178, 38);
+            this.Amount.TabIndex = 39;
+            this.Amount.Text = "Amount Cedis:";
+            this.Amount.Click += new System.EventHandler(this.Amount_Click);
             // 
             // id
             // 
@@ -667,6 +658,18 @@
             this.Total.HeaderText = "Total";
             this.Total.MinimumWidth = 8;
             this.Total.Name = "Total";
+            // 
+            // AmtLb
+            // 
+            this.AmtLb.AutoSize = true;
+            this.AmtLb.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AmtLb.ForeColor = System.Drawing.Color.White;
+            this.AmtLb.Location = new System.Drawing.Point(356, 291);
+            this.AmtLb.Name = "AmtLb";
+            this.AmtLb.Size = new System.Drawing.Size(33, 38);
+            this.AmtLb.TabIndex = 40;
+            this.AmtLb.Text = "0";
+            this.AmtLb.Click += new System.EventHandler(this.AmtLb_Click);
             // 
             // SellingScreen
             // 
@@ -701,7 +704,7 @@
         private Guna.UI.WinForms.GunaLineTextBox ProdName;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaLineTextBox Sellid;
+        private Guna.UI.WinForms.GunaLineTextBox Billid;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.ComboBox PCatCombo;
@@ -715,12 +718,12 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaDataGridView OrderDGV;
         private Guna.UI.WinForms.GunaButton AddPB;
-        private Guna.UI.WinForms.GunaLabel AmtLb;
-        private Guna.UI.WinForms.GunaLabel gunaLabel7;
+        private Guna.UI.WinForms.GunaLabel Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn PName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private Guna.UI.WinForms.GunaLabel AmtLb;
     }
 }
