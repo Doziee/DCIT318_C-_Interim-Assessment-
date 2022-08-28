@@ -91,5 +91,45 @@ namespace ShopriteGroupLimited_Inventory_system
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void gunaButton7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Sid.Text == "")
+                {
+                    MessageBox.Show("Select Seller to Delete");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "delete from SellerTbl where Sellerid =" + Sid.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Seller deleted successfully");
+                    populateIntoSellViewGrid();
+                    Con.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            ProductScreen productScreen = new ProductScreen();
+            productScreen.Show();
+            this.Hide();
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            CategoryScreen categoryScreen = new CategoryScreen();
+            categoryScreen.Show();
+            this.Hide();
+        }
     }
 }
