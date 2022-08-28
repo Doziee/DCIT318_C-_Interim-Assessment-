@@ -71,6 +71,7 @@ namespace ShopriteGroupLimited_Inventory_system
         {
             populateIntoSellViewGrid();
             populateIntoBillViewGrid();
+            SellerNameLb.Text = LoginScreen.Sellername;
         }
         private void SellDGV1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

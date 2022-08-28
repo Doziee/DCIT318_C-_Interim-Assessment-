@@ -17,6 +17,8 @@ namespace ShopriteGroupLimited_Inventory_system
         {
             InitializeComponent();
         }
+
+        public static string Sellername = "";
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Documents\shopritedb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void gunaCircleButton2_Click(object sender, EventArgs e)
@@ -71,11 +73,12 @@ namespace ShopriteGroupLimited_Inventory_system
                     {
                         //MessageBox.Show("You are registered as a seller");
                         Con.Open();
-                        SqlDataAdapter adapter = new SqlDataAdapter("Select Count(8) from SellerTbl where SellerName = '"+ UName.Text +"' and SellerPass = '"+PSword.Text+"'", Con);
+                        SqlDataAdapter adapter = new SqlDataAdapter("Select Count(8) from SellerTbl where SellerName = '"+ UName.Text +"' and SellerPassword = '"+PSword.Text+"'", Con);
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
                         if (dt.Rows[0][0].ToString() == "1")
                         {
+                            Sellername = UName.Text;
                             SellingScreen sell = new SellingScreen();
                             sell.Show();
                             this.Hide();

@@ -131,5 +131,12 @@ namespace ShopriteGroupLimited_Inventory_system
             categoryScreen.Show();
             this.Hide();
         }
+
+        private void gunaLabel7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginScreen login = new LoginScreen();
+            login.Show();
+        }
     }
 }

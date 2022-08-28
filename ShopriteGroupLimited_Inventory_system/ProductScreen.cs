@@ -158,5 +158,19 @@ namespace ShopriteGroupLimited_Inventory_system
         {
 
         }
+
+        private void gunaLabel7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginScreen login = new LoginScreen();
+            login.Show();
+        }
+
+        private void gunaButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SellerScreen seller = new SellerScreen();
+            seller.Show();
+        }
     }
 }
