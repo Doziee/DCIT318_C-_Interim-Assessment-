@@ -74,7 +74,6 @@ namespace ShopriteGroupLimited_Inventory_system
         private void AddPB_Click(object sender, EventArgs e)
         {
             int n = 0, total = Convert.ToInt32(ProdPrice.Text) * Convert.ToInt32(ProdQty.Text);
-            int GrdTotal = 0;
             DataGridViewRow newRow = new DataGridViewRow();
             newRow.CreateCells(OrderDGV);
             newRow.Cells[0].Value = n + 1;
