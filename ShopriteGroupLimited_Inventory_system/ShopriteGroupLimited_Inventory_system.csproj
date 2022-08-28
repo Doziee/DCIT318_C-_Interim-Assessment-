@@ -77,6 +77,12 @@
     <Compile Include="SellerScreen.Designer.cs">
       <DependentUpon>SellerScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="SellingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellingScreen.Designer.cs">
+      <DependentUpon>SellingScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="SellerScreen.resx">
       <DependentUpon>SellerScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellingScreen.resx">
+      <DependentUpon>SellingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
