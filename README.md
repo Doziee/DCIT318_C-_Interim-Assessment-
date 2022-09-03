@@ -10,16 +10,16 @@ This application was developed using C#, and SQL Server was used for the databas
 
 **The application is made up of six screens, namely:**
 
-Splash Screen
-Login Screen
-Category Screen
-Product Screen 
-Seller Screen 
-Selling Screen
+Splash Screen,
+Login Screen,
+Category Screen,
+Product Screen, 
+Seller Screen, 
+Selling Screen.
 
 **The application has two sections, which are:**
 
-Admin session
+Admin session,
 Seller session
 
 The **admin** session allows the admin to access the category, product, and seller screens.  
