@@ -32,7 +32,7 @@ On the seller screen, the admin can add, edit, and delete sellers.
 
 The **seller** session allows a seller to access the selling screen.  
 
-On the selling screen, the seller has the ability to log details of sales based on purchases made. On checkout, the seller screen contains a grid that displays the amount, name, and quantity of the product purchased by a customer. Below this grid, the total amount for the product is displayed in cedis. 
+On the selling screen, the seller has the ability to log details of sales based on purchases made. On checkout, the seller screen contains a grid that displays the amount, name, and quantity of the product purchased by a customer. Below this grid, the total amount for the product is displayed in cedis.
 
 There is also a sale list view that displays the history of purchases and includes an ID, seller name, date, and amount. The sale list is **printable**. 
 
